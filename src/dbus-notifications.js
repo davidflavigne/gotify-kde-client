@@ -28,7 +28,7 @@ export default class Notifications {
     }
 
     notify(data){
-        let iconName = this.iconPath+"/"+data.title+"_64x64.png";
+        let iconName = this.iconPath+"/"+data.title.toLowerCase()+"_64x64.png";
         let self=this;
         Fs.exists(iconName,exists=>{
             let icon=self.defaultIconName;
