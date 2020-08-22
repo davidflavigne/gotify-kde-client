@@ -1,0 +1,23 @@
+{
+  "name": "gotify-kde-client",
+  "version": "1.0.0",
+  "description": "gotify client to show gotify notifications on desktop",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "libnotify",
+    "notify",
+    "gotify",
+    "js",
+    "kde"
+  ],
+  "author": "Rougailsaucix",
+  "license": "MIT",
+  "dependencies": {
+    "dbus": "^1.0.7",
+    "ws": "^7.3.1"
+  }
+}
