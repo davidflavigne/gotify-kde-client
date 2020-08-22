@@ -3,11 +3,11 @@ import Path from 'path';
 import Fs from 'fs';
 
 export default class Notifications {
-    busType=process.env.DBUS_TYPE;
-    busService=process.env.DBUS_SERVICE_NAME;
-    busPath=process.env.DBUS_OBJECT_PATH;
-    busInterface=process.env.DBUS_INTERFACE;
-    busMethod=process.env.DBUS_NOTIFY_METHOD;
+    busType=process.env.DBUS_NOTIFICATION_TYPE;
+    busService=process.env.DBUS_NOTIFICATION_SERVICE_NAME;
+    busPath=process.env.DBUS_NOTIFICATION_OBJECT_PATH;
+    busInterface=process.env.DBUS_NOTIFICATION_INTERFACE;
+    busMethod=process.env.DBUS_NOTIFICATION_NOTIFY_METHOD;
     iface = null;
     iconPath=Path.resolve()+'/resources/icons';
     defaultIconName=Path.resolve()+'/resources/icons/notif_64x64.png';
