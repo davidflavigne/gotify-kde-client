@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/node <path-to-project>/index.js
+Hidden=false
+NoDisplay=false
+Name=gotify-kde-indicator
+Comment[fr_FR]=gotify-kde-indicator official shortcut
+Comment=gotify-kde-indicator official shortcut
+X-GNOME-Autostart-Delay=15
