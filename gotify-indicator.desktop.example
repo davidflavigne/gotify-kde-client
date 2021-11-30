@@ -1,5 +1,6 @@
 [Desktop Entry]
 Type=Application
+Path=<path-to-project>
 Exec=/usr/bin/node <path-to-project>/index.js
 Hidden=false
 NoDisplay=false
