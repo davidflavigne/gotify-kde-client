@@ -1,9 +1,11 @@
-import Dotenv from 'dotenv'
+// import Dotenv from 'dotenv'
 import NodeLogger from 'simple-node-logger'
 import Socket from './src/websocket.js'
 import Notif from './src/dbus-notifications.js'
 
-Dotenv.config();
+// Dotenv.config();
+
+console.log('#NOCOMMIT - env variables: \n', process.env);
 
 const opts = {
 	errorEventName:'error',

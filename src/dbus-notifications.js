@@ -11,12 +11,14 @@ export default class Notifications {
     iface = null;
     iconPath=Path.resolve()+'/resources/icons';
     defaultIconName=Path.resolve()+'/resources/icons/notif_64x64.png';
+    log = null;
 
     constructor(conn, log){
         let self = this;
+        this.log=log;
         Dbus.getBus(this.busType).getInterface(this.busService, this.busPath, this.busInterface, function(err, res) {
             if (err) {
-                return console.log(err);
+                return self.log.error(err);
             }
             self.iface = res;
             return;
@@ -25,12 +27,12 @@ export default class Notifications {
         if(conn){
             conn.addMessageCallback(this.notify);
         }
-        this.log=log;
     }
 
     notify(data){
         let iconName = this.iconPath+"/"+data.title.toLowerCase()+"_64x64.png";
         let self=this;
+        this.log.debug("Sending D-Bus Notification");
         Fs.exists(iconName,exists=>{
             let icon=self.defaultIconName;
             if(exists) icon=iconName;

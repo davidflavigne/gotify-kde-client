@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd <path/to/project>
+env $(grep -v "^#" .env | xargs -d '\n') /usr/bin/node -r dotenv/config <path/to/project>/index.js
